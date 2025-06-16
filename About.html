@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.4s, color 0.4s;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 30px;
+      text-align: center;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.85);
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .toggle-btn, .light-btn {
+      padding: 10px 20px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle-btn:hover, .light-btn:hover {
+      background-color: #B0A695;
+      color: #000;
+    }
+
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    body.dark-mode .container {
+      background: rgba(30, 30, 30, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About me...</h1>
+    
+    <button class="light-btn" onclick="toggleLight()">Lights Off</button>
+    <p id="about-text">
+      I'm studying at STI College Angeles. I'm a creative web designer in four months.
+      My inspiration is my family and Sir Nick. I will become a web developer soon,
+      so I will try to learn other languages.
+    </p>
+  </div>
+
+  <script>
+    
+
+    function toggleLight() {
+      const body = document.body;
+      const btn = document.querySelector('.light-btn');
+      body.classList.toggle('dark-mode');
+
+      if (body.classList.contains('dark-mode')) {
+        btn.textContent = 'Lights On';
+      } else {
+        btn.textContent = 'Lights Off';
+      }
+    }
+  </script>
+</body>
+</html>

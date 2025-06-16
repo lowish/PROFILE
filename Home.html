@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typewriter Effect</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      color: beige;
+      font-family: Arial, sans-serif;
+      font-size: 6vw;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid white;
+      width: 0;
+      animation: typing 3s steps(13, end) forwards, blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 14ch } /* Number of characters */
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 9vw;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 11vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>HELLO WORLD!!!</h1>
+</body>
+</html>
