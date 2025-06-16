@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F3EEEA;
+      color: #000;
+    }
+
+    header {
+      background-color: rgb(9, 27, 44);
+      padding: 15px 30px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      background-color: #B0A695;
+      padding: 10px 20px;
+      border-radius: 50px;
+      transition: background 0.3s;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      background-color: #472D2D;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .text-content {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+
+    .text-content h1 {
+      font-size: 60px;
+      color: #472D2D;
+      margin-bottom: 10px;
+    }
+
+    .text-content h1:hover {
+      color: #B0A695;
+      transition: all 0.5s ease;
+    }
+
+    .text-content h2 {
+      font-size: 30px;
+      color: #B0A695;
+      margin-bottom: 20px;
+    }
+
+    .text-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #472D2D;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-8px);
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+   .icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-right: 56%;
+  padding-bottom: 30px;
+}
+
+.icons i {
+  font-size: 50px;
+  transform: translateY(0);
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #472D2D; 
+  cursor: pointer;
+}
+
+.icons i:hover {
+  transform: translateY(-8px) scale(1.1); 
+  color: #B0A695; 
+}
+
+    
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .typewriter::after {
+      content: '|';
+      animation: blink 0.8s infinite;
+      color: #472D2D;
+      margin-left: 5px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content h1 {
+        font-size: 40px;
+      }
+
+      .text-content h2 {
+        font-size: 24px;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      .icons {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+  .icons {
+    justify-content: center;
+    margin-right: 0;
+    gap: 15px;
+  }
+
+  .icons i {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .icons i {
+    font-size: 30px;
+  }
+}
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="main">
+    <div class="text-content">
+      <div class="container">
+        <h1 class="typewriter">I'am Prince Tan</h1>
+      </div>
+      <h2>Web Developer</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquam ducimus fugit repudiandae suscipit, deserunt quia pariatur vero itaque hic necessitatibus.</p>
+      <button class="btn">Don't Hire me !!!</button>
+    </div>
+    <div class="image-section">
+      <img src="16-removebg-preview.png" alt="Prince Tan">
+    </div>
+  </section>
+
+  <div class="icons">
+    <i class="fa fa-facebook-official" style="color:blue"></i>
+    <i class="fa fa-instagram" style="color:red"></i>
+    <i class="fa fa-twitter" style="color:skyblue"></i>
+  </div>
+
+</body>
+</html>
